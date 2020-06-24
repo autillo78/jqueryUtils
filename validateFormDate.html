@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery utils</title>
+	
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./validateFormDate.js"></script>
+
+	<!-- some styles -->
+	<style type="text/css">
+
+		.error{
+		    background-color: #f2daf1;
+		    -webkit-transition: background-color 0.8s ease;
+		    -moz-transition: background-color 0.8s ease;
+		    -o-transition: background-color 0.8s ease;
+		    transition: background-color 0.8s ease;
+		    /*background-color: #fff;*/
+		}
+
+		#errorMessage{
+			color: #f22f1d;
+			font-size: 12px;
+		}
+
+		.validated{
+			background-color: #e9effa;
+		}
+
+	</style>
+</head>
+<body>
+
+<div style="width: 70%; margin: auto; margin-top: 50px;">
+
+	<form method="get" action="" name="form1">
+		date: 
+		<input type="date" name="date" id="date">
+		<br><br>
+		
+		<input type="button" name="send" id="send" value="send">
+		<span id="errorMessage"></span>
+	</form>
+
+</div>
+
+</body>
+</html>
