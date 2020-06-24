@@ -1,43 +1,44 @@
 
-$(function(){
-	$("#send").click(checkForm);
+$(function () {
+	$("#send").click(checkForm)
 
 	// remove error class
-	$("#text").keydown(removeErrors);
-	$("#date").on("keydown, click", removeErrors);
+	$("#text").keydown(removeErrors)
+	$("#date").on("keydown, click", removeErrors)
 	//$("#date").keydown(removeErrors).click(removeErrors);	
 
 
 });
 
-function checkForm(){
+
+function checkForm () {
 
 	//check date
-	if( $("#date").val() == "" ){
-		showError( "#date", "enter a date" );
+	if ($("#date").val() === "") {
+		showError("#date", "enter a date")
 
-		return false;
+		return false
 	}
 
 	//check text
-	if( $("#text").val() == "" ){
-		showError( "#text", "enter text" );
+	if ($("#text").val() === "") {
+		showError("#text", "enter text")
 
-		return false;
+		return false
 	}
 
 }
 
 
-function showError( id, message ){
+function showError (id, message) {
 
-	$(id).focus().addClass("error");
+	$(id).focus().addClass("error")
 
-	$("#errorMessage").text(message).hide().fadeIn(800);
+	$("#errorMessage").text(message).hide().fadeIn(800)
 }
 
-function removeErrors(){
+function removeErrors () {
 
-	$(this).removeClass("error");
-	$("#errorMessage").text("");
+	$(this).removeClass("error")
+	$("#errorMessage").text("")
 }
